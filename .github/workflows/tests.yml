@@ -29,7 +29,7 @@ jobs:
           coverage: xdebug
 
       - name: Cache Composer packages
-        id: composer-cache-php-${{ matrix.php }}
+        id: composer-cache
         uses: actions/cache@v3
         with:
           path: vendor
