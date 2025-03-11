@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use function ExeQue\Dedent\dedent;
+
 it('dedents', function (string $input, string $expected) {
     $actual = dedent($input);
 

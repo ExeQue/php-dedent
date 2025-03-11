@@ -6,7 +6,7 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.23"
+        "pestphp/pest": "^1.23|^2.0|^3.0"
     },
     "license": "MIT",
     "autoload": {
