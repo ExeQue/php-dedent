@@ -1,5 +1,5 @@
 {
-    "name": "exeque/dedent",
+    "name": "exeque/php-dedent",
     "description": "String dedent for PHP",
     "type": "library",
     "require": {
