@@ -1,0 +1,14 @@
+services:
+  php:
+    build:
+      context: ./docker
+    volumes:
+      - .:/var/www/html
+    environment:
+      - XDEBUG_MODE=coverage
+  composer:
+    extends:
+      service: php
+    volumes:
+      - .:/var/www/html
+    entrypoint: ["composer"]

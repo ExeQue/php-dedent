@@ -1,0 +1,41 @@
+{
+    "name": "exeque/dedent",
+    "description": "String dedent for PHP",
+    "type": "library",
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.23"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ExeQue\\Dedent\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Morten Harders",
+            "email": "mmh@harders-it.dk"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test:coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "infection/extension-installer": true
+        }
+    }
+}
