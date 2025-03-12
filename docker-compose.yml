@@ -1,5 +1,6 @@
 services:
   php:
+    user: "1000:1000"
     build:
       context: ./docker
     volumes:
@@ -7,6 +8,7 @@ services:
     environment:
       - XDEBUG_MODE=coverage
   composer:
+    user: "1000:1000"
     extends:
       service: php
     volumes:
