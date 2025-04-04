@@ -95,3 +95,18 @@ This is a test",
 This is a test",
     ],
 ]);
+
+it('leaves a line blank if it is pure whitespace', function() {
+    $input = "
+    Hello World
+    
+The line above is blank but has whitespace";
+
+    $expected = "
+    Hello World
+
+The line above is blank but has whitespace";
+
+    $actual = dedent($input);
+    expect($actual)->toBe($expected);
+});

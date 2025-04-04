@@ -51,14 +51,18 @@ class Dedent
 
         $min = $this->spacing();
 
-        if ($min === null || $min === 0) {
-            return $this->input;
-        }
-
         $lines = explode("\n", $this->input);
 
         foreach ($lines as $key => $line) {
-            $lines[$key] = substr($line, $min);
+            if(trim($line) === '') {
+                $line = '';
+            }
+
+            if($min !== null && $min !== 0) {
+                $line = substr($line, $min);
+            }
+
+            $lines[$key] = $line;
         }
 
         return implode("\n", $lines);
